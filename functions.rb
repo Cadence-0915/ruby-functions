@@ -48,23 +48,18 @@ arr2 = [15, 12, 3, 4]
 puts(arraystohash(arr1, arr2))
 
 # Example2
-def arraystohash(arr1, arr2)
-	i = 0
-	hash = {}
-		if arr1.length != arr2.length
-			return puts("Your arrays are not equal in length")
-		end
-	while i < arr1.length
-		hash.merge!(arr1[i] => arr2[i])
-		i+=1
+type1 = ["green", "yellow", "white", "houston", "purple" ]
+type2 = [67, 9, -1, "texas", 0]
+
+def arraystohash (array1, array2)
+	hash = Hash.new()
+	for i in 0..array1.length
+		hash[array1[i]] = array2[i]
 	end
-	return hash
+	puts hash
 end
 
-arr1 = ["green", "yellow", "white", "houston", "purple" ]
-arr2 = [67, 9, -1, "texas", 0]
-
-puts(arraystohash(arr1, arr2))
+arraystohash(type1, type2)
 
 # Extra credit-print fizzbuzz function. 
 
@@ -80,4 +75,4 @@ puts(arraystohash(arr1, arr2))
 	end
 end 
 			
-# This code is saying, that for all values in between 1 and 100, do the following. Print 'fizzbuzz' if the integer i is a multiple of 3 and 5. If i is just a multiple of 3, print 'fizz'. If i is just a multiple of 5, print 'buzz'. Otherwise, print the current value of i, since i is moving from 1 up to 100.
+# This code is saying, that for all values for 1 up to 100, do the following: print 'fizzbuzz' if the integer i is a multiple of 3 and 5. If i is only a multiple of 3, print 'fizz'. If i is only a multiple of 5, print 'buzz'. If none of these are true, print the current value of i, since i is moving from 1 up to 100.
